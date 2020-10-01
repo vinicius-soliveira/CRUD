@@ -1,0 +1,2 @@
+Descrição	   Classificação		Equipamento		Data de Cadastro
+Subestaçao 2		Médio		Transformador de Corrente	   21/06/2019

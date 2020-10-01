@@ -1,0 +1,4 @@
+Nome		Número de Série		Tipo	     Data de Cadastro
+Multímetro		1215		Tensão		12/05/2015
+Multímetro		1214		Tensão		12/05/2020
+Alicate	 		01475	 	Corrente	17/06/2019
