@@ -22,7 +22,7 @@ public:
 	virtual ~AlarmeAtuado();
 	AlarmeAtuado(string dataEntrada, string dataSaida, string descricaoEquipamento, int vezesAtuado, bool status);
 	const string& getDataEntrada() const;
-	void setDataEntrada(const string &dataEntrega);
+	void setDataEntrada(const string &dataEntrada);
 	const string& getDataSaida() const;
 	void setDataSaida(const string &dataSaida);
 	const string& getDescricaoEquipamento() const;

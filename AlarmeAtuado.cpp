@@ -37,7 +37,7 @@ const string& AlarmeAtuado::getDataEntrada() const {
 	return dataEntrada;
 }
 
-void AlarmeAtuado::setDataEntrega(const string &dataEntrega) {
+void AlarmeAtuado::setDataEntrada(const string &dataEntrada) {
 	this->dataEntrada = dataEntrada;
 }
 

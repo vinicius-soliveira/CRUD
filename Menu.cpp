@@ -115,37 +115,36 @@ void Menu::manipularAlarmes()
 {
 	int op = 0;
 
-			cout << "***************************" << endl
-			<<"Treetech Sistemas Digitais"<< endl
-			<< "***************************\n" << endl
-			<< " 1 - Ativar Alarme" << endl
-			<< " 2 - Desativar Alarme" << endl
-			<< " 3 - Filtrar Alarmes" << endl
-			<< " 4 - Ordenar por Descrição" << endl
-			<< " 5 - Ordenar por Descrição" << endl
-			<< " 6 - Ver Alarmes Mais Atuados" << endl
-			<< "\nSelecione: ";
-			cin>> op;
+	cout << "***************************" << endl
+		 <<"Treetech Sistemas Digitais"<< endl
+		 << "***************************\n" << endl
+		 << " 1 - Ativar Alarme" << endl
+		 << " 2 - Desativar Alarme" << endl
+		 << " 3 - Filtrar Alarmes" << endl
+		 << " 4 - Ordenar por Descrição" << endl
+		 << " 5 - Ordenar por Descrição" << endl
+		 << " 6 - Ver Alarmes Mais Atuados" << endl
+		 << "\nSelecione: ";
+	 cin>> op;
 
-			cin.ignore();
-			cin.clear();
+	 cin.ignore();
+	 cin.clear();
 
-			switch(op){
-			case 1:
+	 switch(op){
+		case 1: this->ativarAlarmes();
+			break;
+			case 2:this->desativarAlarmes();
 				break;
-			case 2:
+			case 3: this->filtrarAlarme();
 				break;
-			case 3:
+			case 4: this->ordenarAlarmesClassificacao();
+				break;;
+			case 5:this->ordenarAlarmesDescricao();
 				break;
-			case 4:
-				break;
-			case 5:
-				break;
-			case 6:
+			case 6:this->verificarAlarmeAtuado();
 				break;
 			default:
 				break;
-
 
 }
 }
@@ -179,14 +178,44 @@ void Menu::listar() // Lista equipamentos e alarmes cadastrados no sistema
 
 void listarAlarmes()
 {
-
+	int tamanho = alarmes.size();
+	for(int i=0; i< tamanho; i++)
+	{
+		Alarme alarmeTemp = alarmes.at(i);
+		alarmeTemp.detalharAlarme();
+		cout<<endl;
+	}
 }
+
 void listarEquipamentos()
 {
+	int tamanho = equipamentos.size();
+	for(int i=0; i< tamanho; i++)
+		{
+			Equipamento equipamentoTemp = equipamentos.at(i);
+			equipamentoTemp.detalharEquipamento();
+			cout<<endl;
+		}
+}
+
+void pesquisarAlarmes(string palavraChave)
+{
 
 }
+
+void pesquisarEquipamentos(string palavraChave)
+{
+
+}
+
+void desativarAlarmes()
+{
+
+}
+
 void editarAlarmes()
 {
+
 
 }
 void editarEquipamentos()
@@ -202,22 +231,7 @@ void excluirEquipamentos()
 
 }
 
-void pesquisarEquipamentos()
-{
 
-}
-void pesquisarAlarmes()
-{
-
-}
-void ativarAlarmes()
-{
-
-}
-void desativarAlarmes()
-{
-
-}
 void ordenarAlarmesClassificacao()
 {
 
@@ -226,6 +240,16 @@ void ordenarAlarmesDescricao()
 {
 
 }
+
+void filtrarAlarme()
+{
+
+}
+void verificarAlarmeAtuado()
+{
+
+}
+
 Menu::~Menu() {
 	// TODO Auto-generated destructor stub
 }
