@@ -9,7 +9,7 @@
 #define ALARME_H_
 #include <string>
 
-using namespace std;
+using std::string;
 
 class Alarme {
 protected:

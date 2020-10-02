@@ -9,6 +9,7 @@
 #define MENU_H_
 
 #include "Alarme.h"
+#include "AlarmeAtuado.h"
 #include "Equipamento.h"
 
 class Menu{

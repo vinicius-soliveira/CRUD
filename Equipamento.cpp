@@ -7,7 +7,11 @@
 
 #include "Equipamento.h"
 #include<iostream>
-using namespace std;
+
+using std::string;
+using std::cout;
+using std::cin;
+using std::endl;
 
 Equipamento::Equipamento() {
 	this-> nome  = " ";

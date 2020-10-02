@@ -10,9 +10,21 @@
 #include<vector>
 #include"Equipamento.h"
 #include "Alarme.h"
+#include "AlarmeAtuado.h"
 #include "Menu.h"
 
-using namespace std;
+using std::string;
+using std::cout;
+using std::cin;
+using std::endl;
+
+std::vector<Equipamento> equipamentos;
+std::vector<Alarme> alarmes;
+std::vector<AlarmeAtuado> alarmesAtuados;
+
+ofstream arquivoEquipamento;
+ofstream arquivoAlarme;
+ofstream arquivoAlarmeAtuado;
 
 Menu::Menu() {
 
@@ -39,7 +51,7 @@ Menu::Menu() {
 		break;
 	case 3: this->manipularAlarmes();
 		break;
-	case 4:this->consultar();
+	case 4:this->listar();
 		break;
 	default:
 		break;
@@ -50,7 +62,7 @@ Menu::Menu() {
 
 void Menu::criarEquipamento (){
 
-	ofstream arquivo;
+
 	Equipamento equipamento;
 
 		string nomeTemp;
@@ -68,9 +80,10 @@ void Menu::criarEquipamento (){
 		getline(cin, dataTemp);
 
 		equipamento = Equipamento(nomeTemp, numeroSerieTemp, tipoTemp, dataTemp);
-		arquivo.open("Dados_equipamentos.txt", ios::app);
-		arquivo <<"\n" << equipamento.getNome() << "\t \t" << equipamento.getNumeroSerie() << "\t \t" << equipamento.getTipo() << "\t \t"<< equipamento.getData()<< endl;
-		arquivo.close();
+		equipamentos.push_back(equipamento);
+		arquivoEquipamento.open("Dados_equipamentos.txt", ios::app);
+		arquivoEquipamento <<"\n" << equipamento.getNome() << "\t \t" << equipamento.getNumeroSerie() << "\t \t" << equipamento.getTipo() << "\t \t"<< equipamento.getData()<< endl;
+		arquivoEquipamento.close();
 }
 
 void Menu::criarAlarme()
@@ -93,6 +106,7 @@ void Menu::criarAlarme()
 	 getline(cin, dataTemp);
 
 	 alarme = Alarme(descricaoTemp, classificacaoTemp, equipamentoTemp, dataTemp);
+	 alarmes.push_back(alarme);
 	 arquivo.open("Dados_alarmes.txt", ios::app);
 	 arquivo << alarme.getDescricao() << "\t \t" << alarme.getClassificacao() << "\t \t" << alarme.getEquipamento() << "\t \t"<< alarme.getData()<< endl;
 }
@@ -136,7 +150,7 @@ void Menu::manipularAlarmes()
 }
 }
 
-void Menu::consultar()
+void Menu::listar() // Lista equipamentos e alarmes cadastrados no sistema
 {
 
 	int op = 0;
@@ -153,9 +167,9 @@ void Menu::consultar()
 		cin.clear();
 
 		switch(op){
-		case 1:consultarEquipamentos();
+		case 1:listarEquipamentos();
 			break;
-		case 2: consultarAlarmes();
+		case 2: listarAlarmes();
 			break;
 		default:
 			break;

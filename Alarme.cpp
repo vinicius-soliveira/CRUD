@@ -8,7 +8,10 @@
 #include "Alarme.h"
 #include <iostream>
 
-using namespace std;
+using std::string;
+using std::cout;
+using std::cin;
+using std::endl;
 
 Alarme::Alarme() {
 	this-> descricao  = " ";
