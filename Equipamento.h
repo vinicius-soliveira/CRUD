@@ -33,6 +33,8 @@ public:
 	const string& getTipo() const;
 	void setTipo(const string &tipo);
 
+	void detalharEquipamento();
+
 };
 
 #endif /* EQUIPAMENTO_H_ */

@@ -72,4 +72,16 @@ void Alarme::setStatus(bool status) {
 	this->status = status;
 }
 
+void Alarme::detalharAlarme()
+{
+	cout << "\nDescrição: " << this->descricao << endl
+	<< "Classificação: " << this->classificacao << endl
+	<< "Equipamento relacionado: " << this->equipamento<< endl
+	<< "Data de Cadastro: " << this->data << endl;
+
+	if(status)
+		cout<<"Status: Ativado"<<endl;
+	else
+		cout<< "Status: Desativado" << endl;
+}
 

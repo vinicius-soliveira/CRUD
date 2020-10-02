@@ -177,11 +177,11 @@ void Menu::listar() // Lista equipamentos e alarmes cadastrados no sistema
 		}
 }
 
-void consultarAlarmes()
+void listarAlarmes()
 {
 
 }
-void consultarEquipamentos()
+void listarEquipamentos()
 {
 
 }
@@ -202,7 +202,30 @@ void excluirEquipamentos()
 
 }
 
+void pesquisarEquipamentos()
+{
 
+}
+void pesquisarAlarmes()
+{
+
+}
+void ativarAlarmes()
+{
+
+}
+void desativarAlarmes()
+{
+
+}
+void ordenarAlarmesClassificacao()
+{
+
+}
+void ordenarAlarmesDescricao()
+{
+
+}
 Menu::~Menu() {
 	// TODO Auto-generated destructor stub
 }

@@ -28,6 +28,12 @@ public:
 	void excluirEquipamentos();
 	void pesquisarEquipamentos();
 	void pesquisarAlarmes();
+	void ativarAlarmes();
+	void desativarAlarmes();
+	void ordenarAlarmesClassificacao();
+	void ordenarAlarmesDescricao();
+
+
 
 
 

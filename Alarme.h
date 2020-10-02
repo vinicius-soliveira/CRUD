@@ -34,6 +34,8 @@ public:
 	bool isStatus() const;
 	void setStatus(bool status);
 
+	void detalharAlarme();
+
 };
 
 #endif /* ALARME_H_ */

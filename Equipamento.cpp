@@ -66,4 +66,12 @@ void Equipamento::setTipo(const string &tipo) {
 	this->tipo = tipo;
 }
 
+void Equipamento::detalharEquipamento()
+{
+	cout << "\nNome do equipamento: " << this->nome << endl
+	<< "Número de Série: " << this->numeroSerie << endl
+	<< "Tipo: " << this->tipo << endl
+	<< "Data de Cadastro: " << this->data << endl;
+
+}
 
